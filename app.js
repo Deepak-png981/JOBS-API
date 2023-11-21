@@ -33,6 +33,9 @@ app.use(xss());
 // extra packages
 
 // routes
+app.get('/', (req, res) => {
+  res.send('Jobs API')
+})
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/jobs', authenticationMiddleware, jobsRouter);
 
